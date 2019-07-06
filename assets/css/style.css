@@ -16,14 +16,24 @@ h1, h2, h3, h4, h5 {
     margin: 0;
 }
 
-   /* Container */
+hr {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 40px 0;
+
+    border: 0;
+    background-color: #e5e5e5;
+}
+
+    /* Container */
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-   /* Intro */
+    /* Intro */
 
 .intro {
     display: flex;
@@ -73,7 +83,7 @@ h1, h2, h3, h4, h5 {
 }
 
 
-   /* Header */
+    /* Header */
 
 .header {
     width: 100%;
@@ -98,7 +108,7 @@ h1, h2, h3, h4, h5 {
 }
 
 
-   /* Nav */
+    /* Nav */
 .nav {
     text-transform: uppercase;
     font-size: 14px;
@@ -146,7 +156,7 @@ h1, h2, h3, h4, h5 {
     color: #f8d389;
 }
 
-   /* Button */
+    /* Button */
 
 .btn {
     display: inline-block;
@@ -221,16 +231,24 @@ h1, h2, h3, h4, h5 {
     font-weight: 700;
 }
 
-   /* Section */
+    /* Section */
 
 .section {
     padding: 80px 0;
 }
 
+.section--devices {
+    padding-bottom: 0;
+    background: url("../images/devices-bg.png")
+    center no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
 .section__header {
     width: 100%;
     max-width: 950px;
-    margin: 0 auto 40px;
+    margin: 0 auto 50px;
 
     text-align: center;
 }
@@ -264,7 +282,7 @@ h1, h2, h3, h4, h5 {
     font-size: 15px;
 }
 
-   /* About */
+    /* About */
 
 .about {
     margin-top: 80px;
@@ -319,7 +337,7 @@ h1, h2, h3, h4, h5 {
     transition: opacity .2s linear;
 }
 
-   /* Statitics */
+    /* Statitics */
 
 .statistics {
     background-color: #95e1d3;
@@ -358,10 +376,56 @@ h1, h2, h3, h4, h5 {
 }
 
 
+    /* Services */
 
+.services {
+    display: flex;
+}
 
+.services__item {
+    flex: 1 1 0;
 
+    padding-left: 85px;
+    padding-right: 35px;
+    position: relative;
+}
 
+.services__icon {
+    position: absolute;
+    top: 0;
+    left: 28px;
+    z-index: 1;
+}
 
+.services__title {
+    margin-bottom: 10px;
 
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+}
 
+.services__text {
+    font-size: 15px;
+    color: #999;
+    font-family: 'Roboto', sans-serif;
+}
+
+    /* Devices */
+
+.devices {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .devices__item {
+        display: block;
+    }
+    .devices__item--iphone {
+        position: absolute;
+        bottom: -80px;
+        right: 0;
+        z-index: 1;
+    }
