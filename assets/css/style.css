@@ -200,6 +200,10 @@ hr {
     z-index: 1;
 }
 
+.nav-toggle:focus {
+    outline: 0;
+}
+
 .nav-toggle__item {
     display: block;
     width: 100%;
@@ -214,10 +218,6 @@ hr {
     margin: auto;
 
     transition: background .2s linear;
-}
-
-.nav-toggle.active .nav-toggle__item {
-    background: none;
 }
     
 .nav-toggle__item:before,
@@ -248,12 +248,12 @@ hr {
 
 .nav-toggle.active .nav-toggle__item:before {
     transform-origin: left top;
-    transform: rotate(45%) translate3d(0px, -2px, 0);
+    transform: rotate(45deg) translate3d(0px, -2px, 0);
 }
 
 .nav-toggle.active .nav-toggle__item:after {
     transform-origin: left bottom;
-    transform: rotate(-45%) translate3d(0px, 3px, 0);
+    transform: rotate(-45deg) translate3d(0px, 3px, 0);
 }
 
 
@@ -531,7 +531,7 @@ hr {
 }
 
 .services__item {
-    width: 33.33333;
+    width: 33.33333%;
 
     padding: 0 35px 40px 85px;
     position: relative;
@@ -680,11 +680,15 @@ hr {
 
     /* Reviews */
 .reviews {
-    padding: 0 110px;
     position: relative;
 }
 
+.reviews .slick-slider {
+    padding: 0 110px;
+}
+
 .reviews__item {
+    min-height: 210px;
     position: relative;
     padding-left: 250px;
 }
@@ -725,9 +729,14 @@ hr {
     background-color: #f38181;
 }
 
-.reviews__btn {
+.slick-arrow {
+    display: block;
     font-size: 0;
     color: transparent;
+
+    border: 0;
+    background: none;
+    cursor: pointer;
 
     position: absolute;
     top: 50%;
@@ -735,7 +744,11 @@ hr {
     transform: translateY(-50%);
 }
 
-.reviews__btn:after {
+.slick-arrow:focus {
+    outline: 0;
+}
+
+.slick-arrow:after {
     content: "";
     display: block;
     width: 16px;
@@ -746,12 +759,12 @@ hr {
 
 }
 
-.reviews__btn--prev {
+.slick-prev {
     left: 0;
     transform: rotate(-45deg);
 }
 
-.reviews__btn--next {
+.slick-next {
     right: 0;
     transform: rotate(135deg);
 }
@@ -1326,7 +1339,7 @@ hr {
 
      /* Reviews */
 
-     .reviews {
+     .reviews .slick-slider {
          padding: 0 60px;
      }
 
@@ -1401,9 +1414,9 @@ hr {
         background-color: #eb8b8d;
     }
 
-    .nav.active {
-        display: block;
-    }
+   .nav.active {
+       display: block;
+   }
 
     .nav__link {
         display: block;
@@ -1584,11 +1597,11 @@ hr {
     }
 
     /* Reviews */
-    .reviews {
+    .reviews .slick-slider {
         padding: 0;
     }
 
-    .reviews__btn {
+    .slick-arrow {
         top: 18%;
     }
 
